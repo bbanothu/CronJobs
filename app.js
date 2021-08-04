@@ -13,7 +13,7 @@ let transporter = nodemailer.createTransport({
 
 // Retieve data 
 const makeRequest = async url => {
-  let viseTypes = ["Visitor Visa", "Student/Exchange Visitor Visas	", "All Other Nonimmigrant Visas"]
+  let viseTypes = ["Visitor Visa", "Student/Exchange Visitor Visas", "All Other Nonimmigrant Visas"]
   let returnResponse = "";
   try {
     let response = await axios.get(url);
@@ -44,7 +44,7 @@ cron.schedule('* * * * *', async () => {
   let mailOptions = {
     from: '',
     to: '',
-    subject: '',
+    subject: 'Visa Status',
     text: response
   };
 
